@@ -1,0 +1,237 @@
+/*
+* Ajustes preliminares
+*/ 
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: whitesmoke;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1em;
+    
+}
+.container {
+    min-height: 100vh;
+    width: 900px;
+    margin: 0 auto;
+
+}
+.clearfixParent {
+    overflow: hidden;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    padding: 0.5em 0.75rem;
+}
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+    padding: 0.5em 0.75rem;
+}
+p {
+    margin: 0;
+    padding: 0;
+    padding: 0.5em 0.75rem;
+}
+
+
+
+/* 
+*  Estílos de la cabecera
+*/
+
+.headerbar{
+    background-color: #444;
+    height: 5rem;
+    margin: 1rem auto;
+    
+}
+
+
+.logo {
+    height: 2.5rem;
+    width: auto;
+    padding: 0 0.75rem;
+    background-color: lightgray;
+    float: left;
+    margin: 1.2rem;
+
+}
+.logo>span{
+    text-align: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+.redes-sociales {
+    margin: auto 0;
+    float: right;
+    margin: 1.3rem;
+    
+}
+.redes-sociales>img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+/*
+* Estílos navbar
+*/
+.navbar {
+    width: 900px;
+    margin: 1rem 0;
+    background-color: whitesmoke;
+    overflow-y: hidden;
+    
+    
+}
+
+/* Trabajando con Divs e inline-block, obtengo el espaciado entre divs, aunque necesito modificar el último*/
+
+/* Nota: No he encontrado forma de usar float sin que tenga que usar margin, dejando la distribución desajustada */
+
+.navbar>div{
+    display: inline-block;
+    width: calc(98%/5);
+    height: 2.5rem;
+    text-align: center;
+    background-color: darkgray;
+}
+.navbar>div:last-child{
+    width: 20%;
+}
+.navbar>div>a {
+    color: #444;
+    display: block;
+    height: 100%;
+    padding: 0.5rem 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    
+}
+.navbar>div:hover {
+    background-color: thistle;
+}
+
+
+/*
+*   Estílos elementos destacados
+*/
+
+.destacados {
+    width: 900px;
+    height: 10rem;
+    margin: 1rem 0;
+    
+    
+}
+
+/* Requiere de improvización, la clave width, margin, y margin sobre el primero y último hijo */
+
+.destacados>div {
+    float: left;
+    width: 31.7%;
+    margin: 0 1.15%;
+    height: 100%;
+    background-color: darkgray;
+    position: relative; /*para que los hijos se posicionen*/
+    
+}
+.destacados>div:first-child{
+    margin-left: 0;
+}
+.destacados>div:last-child{
+    margin-right: 0;
+    float: right;
+}
+.destacados>div>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  
+
+}
+.destacados>div>span{
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 100, 0.4);
+    border-radius: 0.5rem;
+    padding: 0.5em 0.75rem;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+.destacados>div>button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    border-style: none;
+    border-radius: 0.5rem;
+    background-color: rgba(242, 255, 184, 0.246);
+    padding: 0.5em 0.75rem;
+    z-index: 2;
+}
+.destacados>div>button>a{
+    
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.5rem;   
+    
+}
+.destacados>div>button:hover {
+    background-color: crimson;
+    
+}
+
+/*
+* Estilos Main
+*/
+
+.main {
+    min-height: 25rem;
+    background-color: lightgrey;
+    margin: 1rem 0;
+}
+
+.article-wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+.article{
+    width: 16rem;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    float: left;
+    margin: 1.3rem;
+}
+.article>img {
+    width: 100%;
+}
+.article>button {
+    margin: 0.5em 0.75rem;
+}
+
+/*
+* Estilos Footer
+*/
+
+.footer {
+
+    background-color: lightgrey;
+    margin: 1rem 0;
+}
+address{
+    margin: 0.5rem 0.75em;
+}
+address>a{
+    color: black;
+}
+.copy>p {
+    text-align: center;
+}
